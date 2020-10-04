@@ -159,97 +159,102 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         audioPlayer.prepareToPlay()
  
     }
-    // ボタンがタップされた時の処理
-//    @IBAction func button1(_ sender: Any) {
-//        if ( audioPlayer.isPlaying ){
- //           audioPlayer.stop()
-//            let audioPath = Bundle.main.path(forResource: "ド", ofType:"m4a")!
-  //          let audioUrl = URL(fileURLWithPath: audioPath)
-  //          self.audioPlayer = try? AVAudioPlayer(contentsOf: audioUrl)
-  //         button1.setTitle("①", for: UIControl.State())
-   //         KBbuttonC1.setTitle("C", for: UIControl.State())
-   //     }
-   //     else{
-    //        audioPlayer.play()
-//        button1.setTitle("❶", for: UIControl.State())
- //           KBbuttonC1.setTitle("❶", for: UIControl.State())
-//        }
-//    }
+   //  ボタンがタップされた時の処理
+  @IBAction func button1(_ sender: Any) {
+    if ( audioPlayer.isPlaying ){
+            audioPlayer.stop()
+           let audioPath = Bundle.main.path(forResource: "ド", ofType:"m4a")!
+            let audioUrl = URL(fileURLWithPath: audioPath)
+            self.audioPlayer = try? AVAudioPlayer(contentsOf: audioUrl)
+           button1.setTitle("①", for: UIControl.State())
+            KBbuttonC1.setTitle("C", for: UIControl.State())
+        }
+        else{
+            audioPlayer.play()
+        button1.setTitle("❶", for: UIControl.State())
+            KBbuttonC1.setTitle("❶", for: UIControl.State())
+        }
+    }
     //カラーサークルのボタンが押された時のアクション
- // @IBAction func Clearbutton(_ sender: Any) {
-//  for buttonClear in Clearbutton {
-//    buttonClear.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
- // }
-  //}
-    //@IBAction func BKClearButton(_ sender: Any) {
-     //   for BKbuttonClear in BKClearButton {
-  //  BKbuttonClear.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-   // }
-    //}
+    @IBAction func ClearButton(_ sender: Any) {
+ for buttonClear in Clearbutton {
+    buttonClear.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+  }
+  }
+//    @IBAction func BKClearButton(_ sender: Any) {
+//   BKbuttonClear.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//    }
+//    }
     
     //①曲キー選択　使用スケールを鍵盤上で可視化
-//     @IBAction func C(_ sender: Any) {
-//        for button in ScaleC {
-//             button.backgroundColor = #colorLiteral(red: 1, green: 0.4932718873, blue: // // 0.4739984274, alpha: 1)
-//         }
-//     }
-//     @IBAction func G(_ sender: Any) {
-//         for buttonG in ScaleG {
-//             buttonG.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
-//                 //UIColor.init(red: 240.0, green: 160.0, blue: 110.0, alpha: 0.0)
-//         }
-//     }
+    @IBAction func C(_ sender: Any) {
+        for button in ScaleC {
+            button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+    }
+    }
     
-//     @IBAction func D(_ sender: Any) {
-//         for button in ScaleD {
-//             button.backgroundColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
-//         }
-//     }
-//    @IBAction func A(_ sender: Any) {
-//     for button in ScaleA {
-//    button.backgroundColor = #colorLiteral(red: 0.5563425422, green: 0.9793455005, blue: 0, alpha: 1)
-//    }
-//   }
-//     @IBAction func E(_ sender: Any) {
-//         for button in ScaleE {
-//             button.backgroundColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
-//         }
-//     }
-//     @IBAction func B(_ sender: Any) {
-//         for button in ScaleBb{
-//             button.backgroundColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
-//         }
-//     }
-//     @IBAction func Gb(_ sender: Any) {
-//         for button in ScaleGb {
-//             button.backgroundColor = #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
-//         }
-//    }
-//    @IBAction func Db(_ sender: Any) {
-//         for button in ScaleDb {
- //            button.backgroundColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-//        }
-//     }
-//     @IBAction func Ab(_ sender: Any) {
-//         for button in ScaleAb {
-//             button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
-//         }
-//     }
-//     @IBAction func Eb(_ sender: Any) {
-//         for button in ScaleEb {
-//             button.backgroundColor = #colorLiteral(red: 0.8446564078, green: 0.5145705342, blue: 1, alpha: 1)
-//         }
-//     }
-//     @IBAction func Bb(_ sender: Any) {
-//         for button in ScaleBb{
-//             button.backgroundColor = #colorLiteral(red: 1, green: 0.5212053061, blue: 1, alpha: 1)
-//         }
- //    }
-//     @IBAction func F(_ sender: Any) {
-//         for button in ScaleF {
-//             button.backgroundColor = #colorLiteral(red: 1, green: 0.5409764051, blue: // 0.8473142982, alpha: 1)
-//         }
-//     }
+    @IBAction func G(_ sender: Any) {
+         for buttonG in ScaleG {
+             buttonG.backgroundColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+        }
+     }
+    
+
+    @IBAction func D(_ sender: Any) {
+for button in ScaleD {
+    button.backgroundColor = #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
+         }
+    }
+
+    @IBAction func A(_ sender: Any) {
+for button in ScaleA {
+ button.backgroundColor = #colorLiteral(red: 0.5563425422, green: 0.9793455005, blue: 0, alpha: 1)
+    }
+   }
+    @IBAction func E(_ sender: Any) {
+for button in ScaleE {
+             button.backgroundColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+         }
+     }
+    
+    @IBAction func B(_ sender: Any) {
+for button in ScaleBb{
+ button.backgroundColor = #colorLiteral(red: 0, green: 0.9810667634, blue: 0.5736914277, alpha: 1)
+         }
+     }
+    @IBAction func Gb(_ sender: Any) {
+ for button in ScaleGb {
+             button.backgroundColor = #colorLiteral(red: 0, green: 0.9914394021, blue: 1, alpha: 1)
+         }
+    }
+    @IBAction func Db(_ sender: Any) {
+ for button in ScaleDb {
+            button.backgroundColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        }
+     }
+    @IBAction func Ab(_ sender: Any) {
+for button in ScaleAb {
+             button.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
+         }
+     }
+    
+    @IBAction func Eb(_ sender: Any) {
+ for button in ScaleEb {
+            button.backgroundColor = #colorLiteral(red: 0.8446564078, green: 0.5145705342, blue: 1, alpha: 1)
+         }
+     }
+    
+    @IBAction func Bb(_ sender: Any) {
+for button in ScaleBb{
+ button.backgroundColor = #colorLiteral(red: 1, green: 0.5212053061, blue: 1, alpha: 1)
+ }
+}
+    
+    @IBAction func F(_ sender: Any) {
+        for button in ScaleF {
+button.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
+}
+}
     //②ハーモニカキー選択　ポジションの表記と音配列の変更　予定
     
 
